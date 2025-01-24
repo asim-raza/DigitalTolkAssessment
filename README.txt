@@ -1,44 +1,32 @@
-Do at least ONE of the following tasks: refactor is mandatory. Write tests is optional, will be good bonus to see it. 
-Upload your results to a Github repo, for easier sharing and reviewing.
-
-Thank you and good luck!
 
 
-
-Code to refactor
-=================
-1) app/Http/Controllers/BookingController.php
-2) app/Repository/BookingRepository.php
-
-Code to write tests (optional)
-=====================
-3) App/Helpers/TeHelper.php method willExpireAt
-4) App/Repository/UserRepository.php, method createOrUpdate
-
-
-----------------------------
-
-What I expect in your repo:
-
-X. A readme with:   Your thoughts about the code. What makes it amazing code. Or what makes it ok code. Or what makes it terrible code. How would you have done it. Thoughts on formatting, structure, logic.. The more details that you can provide about the code (what's terrible about it or/and what is good about it) the easier for us to assess your coding style, mentality etc
-
-And 
-
-Y.  Refactor it if you feel it needs refactoring. The more love you put into it. The easier for us to asses your thoughts, code principles etc
+#Finding about code
+1.	Code should be divided in multiple controllers like JobController, NotificationController and History Controller
+2.	Controller must not contain logic, a service should be added where business logic should happen
+3.	Validation is missing, There must be a RequestForm added for validation
+4.	Standardize response, there must the same type of response of each request
+5.	Should use Resource Class for response instead of modals
+6.	Config variables should be taken with config file instead of enc file
+7.	While doblock of method definition exist also is should contain more details
+8.	Queries are directly called from controller which is wrong
+9.	Hard to read code, it should be simple and easy to understand logic
+10.	Naming conventions are inconsistent, it should be same throughout the code
 
 
-IMPORTANT: Make two commits. First commit with original code. Second with your refactor so we can easily trace changes. 
+
+#Improvemnt in Controllers
+1. split the code into proper FormRequest, Services structure and removed logic from controller
+2. Split single controller into 3 controllers with relevant functions
+3. Standardized the response for all requests
+
+#Improvemnt in Repository
+!. Improve code for better readability
+2. Removed env usages and used config instead
 
 
-NB: you do not need to set up the code on local and make the web app run. It will not run as its not a complete web app. This is purely to assess you thoughts about code, formatting, logic etc
+
+Unit test has been added for TeHelper class, That can give the idea how i do unit test
 
 
-===== So expected output is a GitHub link with either =====
-
-1. Readme described above (point X above) + refactored code 
-OR
-2. Readme described above (point X above) + refactored core + a unit test of the code that we have sent
-
-Thank you!
 
 
